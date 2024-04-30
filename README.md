@@ -7,10 +7,3 @@ precoTotal(precoGarrafa): calcula o preço total para comprar garrafas de vinho 
 O código também define as variáveis precoGarrafaMenor e precoGarrafaMaior com os preços das garrafas menores e maiores, respectivamente.
 
 Por fim, o código define a função calcularPreco() que é chamada quando o botão "Calcular Preço" é clicado. A função obtém os valores dos campos "Número de Convidados" e "Média de Consumo de Vinho por Pessoa" e chama a função precoTotal() para calcular os preços totais e as quantidades de garrafas necessárias. Os resultados são exibidos no elemento resultado da página HTML.
-
-Vinicius Prestes RM559097
-Guilherme Ulacco RM558418
-Enzo Motta RM555372
-Luiz Guilherme Perreira RM558932
-Henrique Lomaski RM555351
-Matheus Hostim RM556517
