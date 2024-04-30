@@ -1,4 +1,4 @@
-CP02-JS Vinicius Prestes RM559097 | Guilherme Ulacco RM558418 | Enzo Motta RM555372 |Luiz Guilherme Perreira RM558932 |Henrique Lomaski RM555351 | Matheus Hostim RM556517
+#CP02-JS: Vinicius Prestes RM559097 | Guilherme Ulacco RM558418 | Enzo Motta RM555372 |Luiz Guilherme Perreira RM558932 |Henrique Lomaski RM555351 | Matheus Hostim RM556517
 
 Este é um código JavaScript que calcula o preço total para comprar garrafas de vinho para uma festa, considerando o número de convidados e a média de consumo de vinho por pessoa. O código define as seguintes funções:
 
