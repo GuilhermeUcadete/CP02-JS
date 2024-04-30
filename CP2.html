@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora de Preço de Garrafas de Vinho</title>
+  </head>
+  <body>
+    <h1>Calculadora de Preço de Garrafas de Vinho</h1>
+    <label for="convidados">Número de Convidados:</label>
+    <input type="number" id="convidados" name="convidados"><br>
+    <label for="consumo">Média de Consumo de Vinho por Pessoa (mL):</label>
+    <input type="number" id="consumo" name="consumo"><br>
+    <button onclick="calcularPreco()">Calcular Preço</button>
+    <div id="resultado"></div>
+    <script>
+      function calcularPreco() {
+        let convidados = parseInt(document.getElementById('convidados').value);
+        let consumo = parseFloat(document.getElementById('consumo').value);
+
+        function quantidadeGarrafas(){
+            const calculo = consumo*convidados
+            const media = calculo/convidados
+            console.log(`A quantidade de pessoas na festa é de ${convidados}, e a quantidade media de vinho desejadas são de ${media}`);
+        }
+
+        function precoTotal(precoGarrafa) {
+          const quantidadeGarrafas = consumo * convidados / 750;
+          const quantidadeGarrafasMenor = Math.ceil(quantidadeGarrafas / precoGarrafaMenor) * precoGarrafaMenor;
+          const quantidadeGarrafasMaior = Math.ceil(quantidadeGarrafas / precoGarrafaMaior) * precoGarrafaMaior;
+          const precoTotalMenor = quantidadeGarrafasMenor * precoGarrafaMenor;
+          const precoTotalMaior = quantidadeGarrafasMaior * precoGarrafaMaior;
+          return { precoTotalMenor, precoTotalMaior, quantidadeGarrafasMenor, quantidadeGarrafasMaior };
+        }
+
+        const precoGarrafaMenor = 20; 
+        const precoGarrafaMaior = 45;
+
+        const resultados = precoTotal(precoGarrafaMenor, precoGarrafaMaior);
+
+        document.getElementById('resultado').innerHTML = `
+          <p>Preço total para a garrafa menor: R$${resultados.precoTotalMenor} e a quantidade necessaria é de ${resultados.quantidadeGarrafasMenor}</p>
+          <p>Preço total para a garrafa maior: R$${resultados.precoTotalMaior} e a quantidade necessaria é de ${resultados.quantidadeGarrafasMaior}</p>
+        `;
+      }
+    </script>
+  </body>
+</html>
